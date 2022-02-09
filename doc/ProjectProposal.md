@@ -22,7 +22,7 @@ The data set for this project consists of tables showing all Senators in the 117
 
 
 ## 3. Project Description
-
+Create chances for people to learn about congressional vote by observing user friendly data with interactive option like data querying, updating, etc
 ## 4. Usefulness
 
 ## 5. Realness
