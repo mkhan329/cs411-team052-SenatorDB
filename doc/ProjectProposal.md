@@ -1,7 +1,7 @@
 # Project Proposal
 
 ## 1. Project Title
-    US Congressional Voting Record Analysis
+US Congressional Voting Record Analysis
 ## 2. Project Summary
 
 ## 3. Project Description
