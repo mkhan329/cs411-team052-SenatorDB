@@ -12,7 +12,7 @@
 | Member1     |  boyangy4@illinois.edu |
 | Member2     |       Tuan Tran        |
 | Member2     |  atran49@illinois.edu  |
-| Member3     |     Cao Quang Minh     |
+| Member3     |      Minh Quang Cao    |
 | Member3     | minhcao2@illinois.edu  |
 
 ## Project Information
