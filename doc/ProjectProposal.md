@@ -3,7 +3,7 @@
 ## 1. Project Title
 US Congressional Voting Record Analysis
 ## 2. Project Summary
-In this project, the voting records of Senators from the 117th Congress (2021-2023) will be analyzed. This analysis will display the results of roll call votes over the duration of the 117th Congress. Users will be able to query this data in different ways, such as making categories based on Senator political parties and State origin, or looking at which roll call votes were favoured by certain parties. Users can also perform Create, Read, Update, Delete, and Search operations on the data.
+In this project, the voting records of Senators from the 117th Congress (2021-2023) will be analyzed. This analysis will display the results of roll call votes over the duration of the 117th Congress. Users will be able to query this data in different ways, such as making categories based on Senator political parties and State origin, or looking at which roll call votes were favoured by certain parties. Users can also perform Create, Read, Update, Delete, and Search operations on the data, so that the the database can be constantly updated or corrected when inaccuracies are noticed. The user can also change the data to other datasets like the 116th congress.
 
 The data set for this project consists of tables showing all Senators in the 117th Congress, roll call votes that have been voted on, the results of such votes, and the individual votes of Senators for each bill. Senators in the dataset can be identified by their distinct ICSPSR numbers, and roll call votes can be identified by their distinct roll call number. The votes of senators can be shown for each bill, with the following table explaining votes:
 
@@ -37,7 +37,7 @@ Data that will be stored for this project include:
 4. Parties and their members
 Basic functions of our web app include:
 1. Search for vote data about specific senators, rolls, or parties etc.
-2. Change/maintain the database by creating, deleting, updating data.
+2. Change/maintain the database by creating, deleting, updating data. For example, if the user notices any inaccuracy with the data, it can be corrected by deleting or updating the entry.
 3. Summarize/Analyze the data requested by the user.
 
 The creative component is to visualize the data, such as creating a pie chart, bar chart etc. to show the user the result. We plan to achieve this by using javascript/react, or other open-source libraries
