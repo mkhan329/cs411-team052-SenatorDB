@@ -5,6 +5,7 @@
 1. Each Senator has only one affilated party.
 2. Each Senator has a home state.
 3. Each Senator has atleast one photo available.
+4. There are no different parties with the same name.
 ## Logical Design
 - Senators(SenatorID:INTEGER [PK], Name:VARCHAR(255), BirthYear:INTEGER)
 - Photos(SenatorID:INTEGER [FK to Senators:SenatorID], ImageURL:VARCHAR(1024))
