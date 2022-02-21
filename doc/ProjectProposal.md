@@ -24,8 +24,6 @@ The data set for this project consists of tables showing all Senators in the 117
 ## 3. Project Description
 The problem we want to solve is that people may not be aware of how their senators vote, or what bills their party voted for or voted against. We will solve it by showing people the data corresponding to the votes, and analyze the data to show the users what their senators/party voted for.
 ## 4. Usefulness
-Create chances for people to learn about congressional vote by observing user friendly data with interactive option like data querying, updating, etc.
-
 The usefulness of the project is in showcasing a user friendly data set, with interactive options such as data querying and updating the data set. 
 
 Updating the data set can be useful for users trying to represent Senates from past or future years, while querying the data may allow users to see trends in the votes based on political parties or states. For example, a user would be able to see how Senators from their home state or political party vote on bills. Furthermore, the user can interact with the graph (creative component) to visualize a political map of the United States.
