@@ -19,7 +19,7 @@
 
 ## Relationship Descriptions
 There are four relationships within this design.
-1. Senators-**Vote**-Bills, a senator can vote on many bills, and a bill can be voted on by multiple senators. This is a many-many relationship.
-2. Senators-**Affliated To**->Parties, senator can be affliated to a single party, and a party can have multiple senators. This is a many-one relationship.
-3. Senators<-**Looks Like**->Photos, a senator can look like a single photo, and a photo can only depict a single senator. This is a one-one relationship.
-4. Senators-**From (State)**->States, a seantor can come from a single state, and a state can have multiple senators. This is a many-one relationship.
+1. Senators -- **Vote** -- Bills, a senator can vote on many bills, and a bill can be voted on by multiple senators. This is a many-many relationship.
+2. Senators -- **Affliated To** -> Parties, senator can be affliated to a single party, and a party can have multiple senators. This is a many-one relationship.
+3. Senators <- **Looks Like** -> Photos, a senator can look like a single photo, and a photo can only depict a single senator. This is a one-one relationship.
+4. Senators -- **From (State)** -> States, a seantor can come from a single state, and a state can have multiple senators. This is a many-one relationship.
