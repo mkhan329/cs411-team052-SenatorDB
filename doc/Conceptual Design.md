@@ -17,7 +17,7 @@
 - AffiliatedTo(SenatorID:INTEGER [FK to Senators:SenatorID], PartyName:VARCHAR(255) [FK to Parties:PartyName])
 - FromState(SenatorID:INTEGER [FK to Senators:SenatorID], StateID:CHAR(2) [FK to States:StateID])
 
-## Relationship Descriptions
+## Relationship Descriptions (And their Cardinalities)
 There are four relationships within this design.
 1. Senators -- **Vote** -- Bills, a senator can vote on many bills, and a bill can be voted on by multiple senators. This is a many-many relationship.
 2. Senators -- **Affliated To** -> Parties, senator can be affliated to a single party, and a party can have multiple senators. This is a many-one relationship.
