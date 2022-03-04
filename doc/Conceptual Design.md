@@ -2,13 +2,14 @@
 ## ER Diagram
 ![411 Project Stage 2 ER Diagram](https://media.github-dev.cs.illinois.edu/user/12602/files/9fdeebab-5457-4a1e-8655-47d4c4de7761)
 ## Assumptions Made
-1. Each Senator has only one affilated party.
-2. Each Senator has a home state.
-3. Each Senator has at least one photo available.
-4. There are no different parties with the same name.
+1. Each Senator has only one affilated party, and each party can have multiple senators.
+2. Each Senator can vote on multiple bills, and each bill can be voted on by multiple senators.
+3. Each Senator has a home state, and each state can be home to multiple senators.
+4. Each Senator has one photo available, and each photo has depicts the face of one senator.
+5. There are no different parties with the same name.
 ## Logical Design (Relational Schema)
 - Senators(SenatorID:INTEGER [PK], Name:VARCHAR(255), BirthYear:INTEGER)
-- Photos(SenatorID:INTEGER [FK to Senators:SenatorID], ImageURL:VARCHAR(1024))
+- Photos(ImageName:VARCHAR(255) [PK], ImageURL:VARCHAR(1024))
 - Bills(BillID:INTEGER [PK], Date:DATE, Results:VARCHAR(255), Description:VARCHAR(1024))
 - Parties(PartyName:VARCHAR(255) [PK], YearFounded:INTEGER)
 - States(StateID:CHAR(2) [PK], StateName:VARCHAR(32), DominantParty:VARCHAR(255))
@@ -16,6 +17,14 @@
 - Vote(SenatorID:INTEGER [FK to Senators:SenatorID], BillID:INTEGER [FK to Bills:BillID], VoteType:VARCHAR(32))
 - AffiliatedTo(SenatorID:INTEGER [FK to Senators:SenatorID], PartyName:VARCHAR(255) [FK to Parties:PartyName])
 - FromState(SenatorID:INTEGER [FK to Senators:SenatorID], StateID:CHAR(2) [FK to States:StateID])
+- LooksLike(SenatorID:INTEGER [FK to Senators:SenatorID], ImageName:VARCHAR(255) [FK to Photos:ImageName])
+
+## Entity Descriptions
+1. Senators: A table that stores all senators' IDs, their names, and their birth years of the 117th congress of the US.
+2. Photos: A table that stores one image for each senator in the 117th congress of the US.
+3. Bills: A table that stores the Bill IDs, Dates, Results, and Descriptions of all bills that were voted during the 117th congress of the US.
+4. Parties: A table that stores the party names, and years founded of the top ten biggest political parties in the US.
+5. States: A table that stores all state IDs, state names, and dominant parties in all 50 states of the US.
 
 ## Relationship Descriptions (And their Cardinalities)
 There are four relationships within this design.
