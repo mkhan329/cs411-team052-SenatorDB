@@ -1,6 +1,6 @@
 # Conceptual Design (Stage 2)
 ## ER Diagram
-![ER Diagram](https://media.github-dev.cs.illinois.edu/user/12602/files/dee0ef37-21a2-4eae-bd83-6705624476e6)
+![ER Diagram](https://media.github-dev.cs.illinois.edu/user/12602/files/ab2680b0-7f4d-47bf-b8c8-1c94fd1261c6)
 ## Assumptions Made
 1. Each Senator has only one affilated party, and each party can have multiple senators.
 2. Each Senator can vote on multiple bills, and each bill can be voted on by multiple senators.
