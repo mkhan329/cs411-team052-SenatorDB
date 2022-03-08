@@ -6,10 +6,10 @@
       BirthYear INTEGER,
       PRIMARY KEY (SenatorID)
     );
-    CREATE TABLE Photos(
-      ImageName VARCHAR(255) NOT NULL,
-      ImageURL VARCHAR(1024),
-      PRIMARY KEY (ImageName)
+    CREATE TABLE Wikipedia(
+      PageTitle VARCHAR(255) NOT NULL,
+      PageURL VARCHAR(1024),
+      PRIMARY KEY (PageTitle)
     );
     CREATE TABLE Bills(
       BillID INTEGER NOT NULL,
@@ -53,9 +53,9 @@
     );
     CREATE TABLE LooksLike(
       SenatorID INTEGER,
-      ImageName VARCHAR(255),
-      PRIMARY KEY (SenatorID, ImageName),
+      PageTitle VARCHAR(255),
+      PRIMARY KEY (SenatorID, PageTitle),
       FOREIGN KEY (SenatorID) REFERENCES Senators(SenatorID),
-      FOREIGN KEY (ImageName) REFERENCES Photos(ImageName)
-    )
+      FOREIGN KEY (PageTitle) REFERENCES Wikipedia(PageTitle)
+    );
 ## Advanced SQL Queries
