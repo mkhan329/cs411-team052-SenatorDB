@@ -5,7 +5,7 @@
 1. Each Senator has only one affilated party, and each party can have multiple senators.
 2. Each Senator can vote on multiple bills, and each bill can be voted on by multiple senators.
 3. Each Senator has a home state, and each state can be home to multiple senators.
-4. Each Senator has one photo available, and each photo has depicts the face of one senator.
+4. Each Senator has one wikipedia page available, and each wikipedia page depicts one senator.
 5. There are no different parties with the same name.
 ## Logical Design (Relational Schema)
 - Senators(SenatorID:INTEGER [PK], Name:VARCHAR(255), BirthYear:INTEGER)
