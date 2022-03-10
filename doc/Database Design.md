@@ -13,7 +13,7 @@
     );
     CREATE TABLE Bills(
       BillID INTEGER NOT NULL,
-      Date DATE,
+      Date VARCHAR(16),
       Results VARCHAR(255),
       Description VARCHAR(1024),
       PRIMARY KEY (BillID)
