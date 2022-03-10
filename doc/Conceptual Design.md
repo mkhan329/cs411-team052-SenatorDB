@@ -10,7 +10,7 @@
 ## Logical Design (Relational Schema)
 - Senators(SenatorID:INTEGER [PK], Name:VARCHAR(255), BirthYear:INTEGER)
 - Wikipedia(PageTitle:VARCHAR(255) [PK], PageURL:VARCHAR(1024))
-- Bills(BillID:INTEGER [PK], Date:DATE, Results:VARCHAR(255), Description:VARCHAR(1024))
+- Bills(BillID:INTEGER [PK], Date:VARCHAR(16), Results:VARCHAR(255), Description:VARCHAR(1024))
 - Parties(PartyName:VARCHAR(255) [PK], YearFounded:INTEGER)
 - States(StateID:CHAR(2) [PK], StateName:VARCHAR(32), DominantParty:VARCHAR(255))
 
