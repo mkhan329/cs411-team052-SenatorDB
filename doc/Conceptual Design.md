@@ -3,7 +3,7 @@
 ![ER Diagram](https://media.github-dev.cs.illinois.edu/user/12602/files/ab2680b0-7f4d-47bf-b8c8-1c94fd1261c6)
 ## Assumptions Made
 1. Each Senator has only one affilated party, and each party can have multiple senators.
-2. Each Senator can vote on multiple bills, and each bill can be voted on by multiple senators.
+2. Each Senator can vote on multiple bills (one vote per bill), and each bill can be voted on by multiple senators.
 3. Each Senator has a home state, and each state can be home to multiple senators.
 4. Each Senator has one wikipedia page available, and each wikipedia page depicts one senator.
 5. There are no different parties with the same name.
