@@ -2,18 +2,30 @@
   font-size: 32px;
   text-align: center;
   width: 100%;
-  height: 8vh;
+  height: fit-content;
   top: 0px;
   left: 0px;
   z-index: 2;
 }
 .nav-bar-button {
-  display: inline-block;
+  display: inline-flex;
+  margin: 8px;
+  padding: 4px;
   font-size: 32px;
-  width: 100px;
-  height: 50px;
-  margin: 25px;
-  border: 2px black;
-  color:rgb(47, 145, 236);
+  line-height: 32px;
+  width: fit-content;
+  height: fit-content;
+  color:deepskyblue;
+  transition-duration: 0.2s;
   text-decoration: none;
+  padding: auto;
+  border-radius: 8px;
+}
+.nav-bar-button:hover {
+  color:white;
+  background-color:deepskyblue;
+}
+Link {
+  margin: 0px;
+  padding: 0px;
 }

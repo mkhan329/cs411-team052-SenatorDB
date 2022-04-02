@@ -1,15 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Axios from 'axios';
 import NavBar from '../parts/navbar';
-
+import './roll.css';
 function App() {
   return (
-    <div className='party-container'>
-      <NavBar/>
-      <h1 className="page-title">Voting Analysis By Party</h1>
-      <form>
-        <label for="rNumber">Select Roll</label>
-        <input type="number" id="rNumber" value="1"></input>
-      </form>
+    <div className='roll-container'>
     </div>
   );
 }

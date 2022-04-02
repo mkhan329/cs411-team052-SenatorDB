@@ -10,6 +10,9 @@ function App() {
       <Link className='nav-bar-button' to='/party'>Party</Link>
       <Link className='nav-bar-button' to='/senator'>Senator</Link>
       <Link className='nav-bar-button' to='/Roll'>Roll</Link>
+      <Link className='nav-bar-button' to='/Roll'>Modify Data</Link>
+      <Link className='nav-bar-button' to='/Roll'>Search</Link>
+      <Link className='nav-bar-button' to='/Roll'>Interesting Cases</Link>
     </div>
   );
 }
