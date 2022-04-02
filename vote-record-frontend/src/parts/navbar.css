@@ -1,0 +1,19 @@
+#nav-bar-container {
+  font-size: 32px;
+  text-align: center;
+  width: 100%;
+  height: 8vh;
+  top: 0px;
+  left: 0px;
+  z-index: 2;
+}
+.nav-bar-button {
+  display: inline-block;
+  font-size: 32px;
+  width: 100px;
+  height: 50px;
+  margin: 25px;
+  border: 2px black;
+  color:rgb(47, 145, 236);
+  text-decoration: none;
+}
