@@ -23,7 +23,6 @@ function App() {
         <button onClick={submitRollNumber}>Submit</button>
       </div>
       <div id="data-holder">
-
       </div>
     </div>
   );

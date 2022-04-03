@@ -1,0 +1,21 @@
+.modify-container {
+  width: 80%;
+  margin: auto;
+}
+.modify-button {
+  margin: 10px auto 10px auto;
+  padding: 10px;
+  border: 2px solid deepskyblue;
+  border-radius: 8px;
+  height: fit-content;
+  font-size: 28px;
+  width: 15%;
+  background-color: deepskyblue;
+  color: white;
+  cursor: pointer;
+  transition-duration: 0.25s;
+}
+.modify-button:hover {
+  color: deepskyblue;
+  background-color: white;
+}
