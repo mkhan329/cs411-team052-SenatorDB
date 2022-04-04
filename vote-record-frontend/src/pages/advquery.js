@@ -100,7 +100,7 @@ function App() {
   return (
     <div className='modify-container'>
       <NavBar/>
-      <h1 className="page-title">Interesting Case</h1>
+      <h1 className="page-title">Interesting Cases &amp; Advanced Queries</h1>
       <p>We have built two advanced queries. They provide interesting ways
         to use the data we have.
       </p>

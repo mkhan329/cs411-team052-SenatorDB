@@ -1,17 +1,18 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import {Link, useLocation} from 'react-router-dom';
 
 import './navbar.css';
 
 function App() {
+  const pathname = useLocation().pathname;
   return (
     <div id='nav-bar-container'>
-      <Link className='nav-bar-button' to='/'>Home</Link>
-      <Link className='nav-bar-button' to='/party'>Party</Link>
-      <Link className='nav-bar-button' to='/senator'>Senator</Link>
-      <Link className='nav-bar-button' to='/Roll'>Roll</Link>
-      <Link className='nav-bar-button' to='/modify'>Modify Data</Link>
-      <Link className='nav-bar-button' to='/adv'>Interesting Cases</Link>
+      <Link className='nav-bar-button' to='/' id='home-button'>Home</Link>
+      <Link className='nav-bar-button' to='/party' id='party'>Party</Link>
+      <Link className='nav-bar-button' to='/senator' id='senator'>Senator</Link>
+      <Link className='nav-bar-button' to='/roll' id='roll'>Roll</Link>
+      <Link className='nav-bar-button' to='/modify' id='modify'>Modify Data</Link>
+      <Link className='nav-bar-button' to='/adv' id='adv'>Advanced</Link>
     </div>
   );
 }
