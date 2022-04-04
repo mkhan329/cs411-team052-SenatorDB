@@ -8,6 +8,7 @@ function App() {
   const [senName, setSenName] = useState('');
 
   const getQuery1 = async () => {
+    document.getElementById("query-result-title").innerHTML = "Advanced Query #1 Results";
     const dataHolder = document.getElementById('data-holder');
     const result = await Axios.get('http://34.135.227.212/adv1-us').catch(function (error) {
       console.log(error);
@@ -15,8 +16,8 @@ function App() {
       return;
     });
     console.log(result);
-    dataHolder.innerHTML = "";
     if (result.data.length != 0) {
+      dataHolder.innerHTML = "";
       const table = document.createElement("table");
       const row0 = document.createElement("tr");
       const item01 = document.createElement("th");
@@ -52,7 +53,9 @@ function App() {
       dataHolder.appendChild(table);
     } else dataHolder.innerHTML = "No Results";
   };
+
   const getQuery2 = async () => {
+    document.getElementById("query-result-title").innerHTML = "Advanced Query #2 Results";
     const dataHolder = document.getElementById('data-holder');
     const result = await Axios.get('http://34.135.227.212/adv2-us').catch(function (error) {
       console.log(error);
@@ -60,8 +63,8 @@ function App() {
       return;
     });
     console.log(result);
-    dataHolder.innerHTML = "";
     if (result.data.length != 0) {
+      dataHolder.innerHTML = "";
       const table = document.createElement("table");
       const row0 = document.createElement("tr");
       const item01 = document.createElement("th");
@@ -102,14 +105,21 @@ function App() {
       <NavBar/>
       <h1 className="page-title">Interesting Cases &amp; Advanced Queries</h1>
       <p>We have built two advanced queries. They provide interesting ways
-        to use the data we have.
+        to use the data we have. <br/>
+        <b>Press on Either Button Below to Start an Advanced Query.</b>
       </p>
-      <p>The first query returns all bills that has a majority of "yea" votes.
-        This helps us see which bills were passed by the 117th senate.
+      <p>The first advanced query returns all bills that has a majority of "yea" votes.
+        This helps us see which bills were passed by the 117th senate. <br/>
+        Query #1 returns the BillID, number of "yea" votes, vote results, and date, 
+        for all bills that has a majority of yea votes.
       </p>
       <div className='modify-button' onClick={getQuery1}>Query 1</div>
+      <p> The second advanced query returns the BillID, number of "nay" votes, vote results, and date,
+        for all bills that were passed. Sorted in descending order by number of "nay" votes from democrats. <br/>
+        This helps us see what bills were really disliked by the democrats but were still passed.
+      </p>
       <div className='modify-button' onClick={getQuery2}>Query 2</div>
-      <h2>Query Results</h2>
+      <h2 id="query-result-title">Advanced Query Results</h2>
       <div id="data-holder">N/A</div>
     </div>
   );
