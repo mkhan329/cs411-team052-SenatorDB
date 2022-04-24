@@ -1,11 +1,26 @@
 import React, { useState } from 'react';
+import ReactDOM from 'react-dom';
 import Axios from 'axios';
 import NavBar from '../parts/navbar';
 import './senator.css';
 import { useNavigate } from 'react-router-dom';
+import AntChart from '../parts/charts';
 function App() {
   const [senName, setSenName] = useState('');
-
+  var chartData = [{
+    type: 'Democrat',
+    value: 0
+  }, {
+    type: 'Republican',
+    value: 0
+  }, {
+    type: 'Independent',
+    value: 0
+  }, {
+    type: 'Other Parties',
+    value: 0
+  }];
+  var chartColor = ['#0080ff', '#ff0000', '#40ff00', '#ffbf00'];
   const submitSenName = async () => {
     const dataHolder = document.getElementById('data-holder');
     const textBoxValue = document.getElementById('sName').value;
@@ -16,7 +31,10 @@ function App() {
       dataHolder.innerHTML = "Network Error: Connection Refused. Check if VM instance is running.";
       return;
     });
-
+    chartData[0].value = 0;
+    chartData[1].value = 0;
+    chartData[2].value = 0;
+    chartData[3].value = 0;
     console.log("Getting");
     console.log(result);
     
@@ -70,10 +88,15 @@ function App() {
         row.appendChild(item5);
         row.appendChild(item6);
         table.appendChild(row);
+        if (el.PartyName == "Democrat") chartData[0].value++;
+        else if (el.PartyName == "Republican") chartData[1].value++;
+        else if (el.PartyName == "Independent") chartData[2].value++;
+        else chartData[3].value++;
       });
       dataHolder.appendChild(table);
     }
-    
+    const root = ReactDOM.createRoot(document.getElementById("chart-holder"));
+    root.render(<AntChart id='Senator-Chart' data={[...chartData]} color={chartColor} title='Party Composition'/>);
   }
 
   return (
@@ -85,6 +108,7 @@ function App() {
         <input type="text" id="sName"></input>
         <button onClick={submitSenName}>Submit</button>
       </div>
+      <div id="chart-holder"></div>
       <div id="data-holder">
       </div>
     </div>

@@ -1,13 +1,24 @@
 import React, { useState } from 'react';
+import ReactDOM from 'react-dom';
 import Axios from 'axios';
 import NavBar from '../parts/navbar';
+import AntChart from '../parts/charts';
 
 import './modifydata.css';
 
 function App() {
   const [senName, setSenName] = useState('');
-
+  var chartData = [{
+    type: 'Positive',
+    value: 0
+  }, {
+    type: 'Negative',
+    value: 0
+  }];
+  var chartColor = ['#0080ff', '#ff0000', '#40ff00', '#ffbf00'];
   const getQuery1 = async () => {
+    chartData[0].value = 0;
+    chartData[1].value = 0;
     document.getElementById("query-result-title").innerHTML = "Advanced Query #1 Results";
     const dataHolder = document.getElementById('data-holder');
     const result = await Axios.get('http://34.135.227.212/adv1-us').catch(function (error) {
@@ -49,12 +60,19 @@ function App() {
         row.appendChild(item3);
         row.appendChild(item4);
         table.appendChild(row);
+        if (el.Results.includes("Confirmed") || el.Results.includes("Agreed") || el.Results.includes("Passed")) {
+          chartData[0].value++;
+        } else chartData[1].value++;
       });
       dataHolder.appendChild(table);
     } else dataHolder.innerHTML = "No Results";
+    const root = ReactDOM.createRoot(document.getElementById("chart-holder"));
+    root.render(<AntChart id='Senator-Chart' data={[...chartData]} color={chartColor} title='Bill Results'/>);
   };
 
   const getQuery2 = async () => {
+    chartData[0].value = 0;
+    chartData[1].value = 0;
     document.getElementById("query-result-title").innerHTML = "Advanced Query #2 Results";
     const dataHolder = document.getElementById('data-holder');
     const result = await Axios.get('http://34.135.227.212/adv2-us').catch(function (error) {
@@ -96,9 +114,14 @@ function App() {
         row.appendChild(item3);
         row.appendChild(item4);
         table.appendChild(row);
+        if (el.Results.includes("Confirmed") || el.Results.includes("Agreed") || el.Results.includes("Passed")) {
+          chartData[0].value++;
+        } else chartData[1].value++;
       });
       dataHolder.appendChild(table);
     } else dataHolder.innerHTML = "No Results";
+    const root = ReactDOM.createRoot(document.getElementById("chart-holder"));
+    root.render(<AntChart id='Senator-Chart' data={[...chartData]} color={chartColor} title='Bill Results'/>);
   }
   return (
     <div className='modify-container'>
@@ -120,6 +143,7 @@ function App() {
       </p>
       <div className='modify-button' onClick={getQuery2}>Query 2</div>
       <h2 id="query-result-title">Advanced Query Results</h2>
+      <div id="chart-holder"></div>
       <div id="data-holder">N/A</div>
     </div>
   );

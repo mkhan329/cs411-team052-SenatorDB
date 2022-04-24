@@ -1,10 +1,12 @@
 import React from 'react';
 
 import NavBar from '../parts/navbar';
-
 import './homepage.css';
 
+import AntChart from '../parts/charts';
+
 function App() {
+  
   return (
     <div className="home-container">
       <NavBar/>
@@ -72,6 +74,9 @@ function App() {
           </tr>
         </table>
       </p>
+      {/* <div id="chart">
+        <Charta/>
+      </div> */}
     </div>
   );
 }
