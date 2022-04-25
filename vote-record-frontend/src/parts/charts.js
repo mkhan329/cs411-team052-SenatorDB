@@ -25,7 +25,7 @@ function App({
       label: {
         type: 'inner',
         offset: '-50%',
-        content: '{value}',
+        content: '{percentage}',
         style: {
           textAlign: 'center',
           fontSize: 14,
