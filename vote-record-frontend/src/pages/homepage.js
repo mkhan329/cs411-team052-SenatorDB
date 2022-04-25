@@ -4,6 +4,7 @@ import NavBar from '../parts/navbar';
 import './homepage.css';
 
 import AntChart from '../parts/charts';
+import AntMapChart from '../parts/mapchart';
 
 function App() {
   
@@ -74,9 +75,9 @@ function App() {
           </tr>
         </table>
       </p>
-      {/* <div id="chart">
-        <Charta/>
-      </div> */}
+      <div id="chart">
+        {/* <AntMapChart/> */}
+      </div>
     </div>
   );
 }

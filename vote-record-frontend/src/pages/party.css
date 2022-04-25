@@ -1,0 +1,11 @@
+.party-container {
+  border: 2px solid red;
+  width: 80%;
+  height: fit-content;
+}
+#us-map {
+  display: block;
+  position: absolute;
+  left: 500px;
+  top: 500px;
+}
