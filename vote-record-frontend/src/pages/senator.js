@@ -24,7 +24,7 @@ function App() {
   const submitSenName = async () => {
     const dataHolder = document.getElementById('data-holder');
     const textBoxValue = document.getElementById('sName').value;
-    const result = await Axios.get('http://34.135.227.212/senator/', {
+    const result = await Axios.get('//34.135.227.212/senator/', {
       params: {keyword: textBoxValue}
     }).catch(function (error) {
       console.log(error);

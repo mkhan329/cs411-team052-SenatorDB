@@ -21,7 +21,7 @@ function App() {
     chartData[1].value = 0;
     document.getElementById("query-result-title").innerHTML = "Advanced Query #1 Results";
     const dataHolder = document.getElementById('data-holder');
-    const result = await Axios.get('http://34.135.227.212/adv1-us').catch(function (error) {
+    const result = await Axios.get('//34.135.227.212/adv1-us').catch(function (error) {
       console.log(error);
       dataHolder.innerHTML = "Network Error: Connection Refused. Check if VM instance is running.";
       return;
@@ -75,7 +75,7 @@ function App() {
     chartData[1].value = 0;
     document.getElementById("query-result-title").innerHTML = "Advanced Query #2 Results";
     const dataHolder = document.getElementById('data-holder');
-    const result = await Axios.get('http://34.135.227.212/adv2-us').catch(function (error) {
+    const result = await Axios.get('//34.135.227.212/adv2-us').catch(function (error) {
       console.log(error);
       dataHolder.innerHTML = "Network Error: Connection Refused. Check if VM instance is running.";
       return;

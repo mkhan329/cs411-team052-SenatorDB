@@ -17,7 +17,7 @@ function App() {
         <Route exact path="/" element={<Home/>}/>
         <Route exact path="/senator" element={<Senator/>}/>
         <Route exact path="/roll" element={<NotFound/>}/>
-        <Route exact path="/party" element={<Party/>}/>
+        <Route exact path="/party" element={<NotFound/>}/>
         <Route exact path="/modify" element={<ModifyData/>}/>
         <Route exact path="/adv" element={<Advanced/>}/>
         <Route path="*" element={<NotFound/>}/>
