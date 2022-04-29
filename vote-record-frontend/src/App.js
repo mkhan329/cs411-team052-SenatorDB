@@ -8,6 +8,7 @@ import Bills from './pages/bills';
 import ModifyData from './pages/modifydata';
 import Advanced from './pages/advquery';
 import NotFound from './pages/404';
+import Footer from './parts/footer';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route exact path="/adv" element={<Advanced/>}/>
         <Route path="*" element={<NotFound/>}/>
       </Routes>
+      <Footer/>
     </div>
     </Router>
   );

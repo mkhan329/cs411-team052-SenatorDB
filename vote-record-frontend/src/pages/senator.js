@@ -36,9 +36,9 @@ function App() {
     chartData[2].value = 0;
     chartData[3].value = 0;
     console.log("Getting");
-    console.log(result);
+    // console.log(result);
     
-    if (result.data.length == 0) dataHolder.innerHTML = "No Results Found for " + textBoxValue;
+    if (result.data.length === 0) dataHolder.innerHTML = "No Results Found for " + textBoxValue;
     else {
       dataHolder.innerHTML = "Search Results";
       const table = document.createElement("table");
@@ -63,7 +63,7 @@ function App() {
       row0.appendChild(item06);
       table.appendChild(row0);
       result.data.forEach(el => {
-        console.log(el.SenatorID);
+        //console.log(el.SenatorID);
         const row = document.createElement("tr");
         const item1 = document.createElement("th");
         const item2 = document.createElement("th");
@@ -88,9 +88,9 @@ function App() {
         row.appendChild(item5);
         row.appendChild(item6);
         table.appendChild(row);
-        if (el.PartyName == "Democrat") chartData[0].value++;
-        else if (el.PartyName == "Republican") chartData[1].value++;
-        else if (el.PartyName == "Independent") chartData[2].value++;
+        if (el.PartyName === "Democrat") chartData[0].value++;
+        else if (el.PartyName === "Republican") chartData[1].value++;
+        else if (el.PartyName === "Independent") chartData[2].value++;
         else chartData[3].value++;
       });
       dataHolder.appendChild(table);
@@ -104,7 +104,7 @@ function App() {
       <NavBar/>
       <h1 className="page-title">Senators</h1>
       <div className='form'>
-        <label for="sName" className='text'>Search for Senator by Name:</label>
+        <label for="sName" className='text' style={{"fontSize":"24px", "lineHeight":"24px"}}>Search for Senator by Name:</label>
         <input type="text" id="sName"></input>
         <button onClick={submitSenName}>Submit</button>
       </div>

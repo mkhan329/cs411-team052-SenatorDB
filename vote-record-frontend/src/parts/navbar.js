@@ -8,7 +8,7 @@ function App() {
   return (
     <div id='nav-bar-container'>
       <Link className='nav-bar-button' to='/' id='home-button'>Home</Link>
-      <Link className='nav-bar-button' to='/party' id='party'>Party</Link>
+      {/* <Link className='nav-bar-button' to='/party' id='party'>Party</Link> */}
       <Link className='nav-bar-button' to='/senator' id='senator'>Senator</Link>
       <Link className='nav-bar-button' to='/bills' id='bills'>Bills</Link>
       <Link className='nav-bar-button' to='/modify' id='modify'>Modify Data</Link>
