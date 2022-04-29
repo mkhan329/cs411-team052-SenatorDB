@@ -39,6 +39,17 @@ app.get('/sen_db', (req, res) => {
 });
 });
 
+// PROCEDURE 
+app.get('/procedure', (req, res) => {
+        var sqlQry = 'CALL BillPartisanship';
+        connection.query(sqlQry,function(error,results) {
+                if (error) {res.send("error from the database side");}
+        else {
+                res.json(results);
+                }
+});
+});
+
 // PARTIES DATABASE
 app.get('/party_db', (req, res) => {
         var sqlQry = 'SELECT * FROM Parties limit 3';
@@ -85,6 +96,24 @@ app.get('/update', function(req, res, next) {
   res.render('index', { title: 'Contact-Us' });
 });*/
 
+app.get('/affiliated', function(req, res, next) {
+  res.render('affiliated', { title: 'Contact-Us' });
+});
+// SELECT FROM SENATOR TABLE BASE ON NAME
+app.post('/affiliated-us', function(req, res, next) {
+  var name = req.body.name;
+  console.log(name);
+ 
+  var sql = `SELECT * FROM AffiliatedTo WHERE SenatorID LIKE '${name}' limit 3`;
+
+console.log(sql);
+  connection.query(sql, function(err, result) {
+    if (err) throw err;
+    console.log('record selected');
+    req.flash('success', 'Data selected successfully!');
+    res.json(result);
+  });
+})
  
 
 
@@ -160,7 +189,7 @@ app.post('/delete-us', function(req, res, next) {
   var sen_id = req.body.sen_id;
   console.log(sen_id);
   
-  var delete_sql = `DELETE FROM Senators WHERE SenatorID = ${sen_id}`; 
+  var delete_sql = `DELETE FROM Senators WHERE SenatorID = ${sen_id}`;
 
 console.log(delete_sql);
   connection.query(delete_sql, function(err, result) {
