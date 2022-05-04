@@ -63,3 +63,6 @@ Michael Cao - Worked on Advance Query, Setting up data tables of parties, votes,
 Boyang Yu - Worked on creating and designing the frontend application, as well as the creative component of interactive charts. Also participated in designing database schema.
 
 Tuan Tran - I set up the node.js and all html files for the back-end server as well as the CRUD processes. I also participated in designing the database schema. 
+
+# Video Demo Link
+[https://youtu.be/nlwSyAQ98BE](https://youtu.be/nlwSyAQ98BE)
